@@ -1,7 +1,7 @@
 import React from "react";
 import { Game } from "../hooks/useGames";
 import { Card, CardBody, HStack, Heading, Image, Text } from "@chakra-ui/react";
-import PlaformIconList from "./PlaformIconList";
+import PlatformIconList from "./PlatformIconList";
 import CriticScore from "./CriticScore";
 import getCroppedImageUrl from "../services/image-url";
 
@@ -16,7 +16,7 @@ const GameCard = ({ game }: Props) => {
       <CardBody>
         <Heading fontSize="2xl">{game.name}</Heading>
         <HStack justifyContent="space-between">
-          <PlaformIconList
+          <PlatformIconList
             platforms={game.parent_platforms.map((p) => p.platform)}
           />
           <CriticScore score={game.metacritic} />
